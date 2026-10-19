@@ -60,15 +60,3 @@ AUDIT (requires AUDIT role)
   GET    /api/audit/stats
   GET    /api/audit/jobs/by-category
 
-REQUIREMENTS
-------------
-R1  collections  : ArrayList, HashMap, TreeSet used in services
-R2  generics     : GenericFilter<T> class in config package
-R3  lambdas      : stream filters, predicates, comparators in services
-R4  stream api   : filter, map, sorted, collect, groupingBy
-R5  concurrency  : updateStatusAsync uses @Async + CompletableFuture
-R6  jdbc         : getStatusStats() uses JdbcTemplate directly
-R7  jpa/orm      : all entities mapped with @Entity, JpaRepository
-R8  rest         : three role controllers with full CRUD endpoints
-R9  design pattern: Singleton, Spring beans are singletons by default, documented in SecurityConfig
-R10 exceptions   : ResourceNotFoundException (unchecked), DuplicateApplicationException (checked), GlobalExceptionHandler
